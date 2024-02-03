@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: linear-gradient(rgb(255, 255, 255), #30F8EC);
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .sentence{
+        font-size: 45px;
+        white-space: nowrap;
+    }
+    .sentence span {
+        display: inline-block;
+        position:absolute;
+        transition: 1s ; /* Add smooth transition for movement */
+        margin-right: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <img onmouseenter="myFunction(this)" src="circle.png">
+            <img src="circle.png">
+        <p class="sentence">
+            <span onmouseenter="myFunction(this)">hi</span>
+            <span onmouseenter="myFunction(this)">there!</span>
+        </p>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
