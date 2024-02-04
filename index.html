@@ -20,26 +20,95 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        position: relative;
     }
 
     .sentence{
+        font-size: 80px;
+        white-space: nowrap;
+    }
+    
+    .large{
         font-size: 45px;
         white-space: nowrap;
     }
+
+    .large span {
+        display: inline-block;
+        position:absolute;
+        transition: 1.5s ; /* Add smooth transition for movement */
+        margin-right: 5px;
+        transform: scale(1);
+    }
+
+    .large span img {
+    width: 250px; 
+    height: 250px;
+    transition: transform 0.3s ease; /* Smooth transition for transform */}
+
     .sentence span {
         display: inline-block;
         position:absolute;
-        transition: 1s ; /* Add smooth transition for movement */
+        transition: 1.5s ; /* Add smooth transition for movement */
         margin-right: 5px;
+        transform: scale(0.8);
     }
+
+    .sentence span img {
+    width: 100px; 
+    height: 100px;
+    transition: transform 0.3s ease; /* Smooth transition for transform */}
+
+    .sentence span:hover img {
+    transform: scale(2); /* Enlarge image on hover */
+}
 </style>
 
 <body>
+    
     <div class="container">
-        <p class="sentence">
-            <span onmouseenter="myFunction(this)"><img src="Ellipse25.svg"></span>
-            <span onmouseenter="myFunction(this)">there!</span>
+        <p class="large">
+            <span onmouseenter="myFunction(this)"><img src="shape11.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape11.svg"></span>
         </p>
+        <p class="sentence">
+            <span onmouseenter="myFunction(this)"><img src="shape1.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape2.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape3.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape4.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape5.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape14.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape15.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape1.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape2.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape3.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape4.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape5.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape14.svg"></span>
+            <span onmouseenter="myFunction(this)"><img src="shape15.svg"></span>
+        </p>
+        
     </div>
     <script src="sketch.js"></script>
 </body>
