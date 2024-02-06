@@ -3,113 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Plums</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+
 </head>
+
+
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
-    body {
-        background-image: linear-gradient(rgb(255, 255, 255), #30F8EC);
-    }
+body{
+    background-color: #1334a9;
+}
 
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        position: relative;
-    }
-
-    .sentence{
-        font-size: 80px;
-        white-space: nowrap;
-    }
+.rectangle{
+    width: 100vw;
+    height:40vw;
+    background-color: #384aed;
     
-    .large{
-        font-size: 45px;
-        white-space: nowrap;
-    }
+}
 
-    .large span {
-        display: inline-block;
-        position:absolute;
-        transition: 1.5s ; /* Add smooth transition for movement */
-        margin-right: 5px;
-        transform: scale(1);
-    }
+.poem{
+    margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3vw;
+        font-family: 'Bitter', serif; 
+        padding-left:15px; 
+        padding-right:15px; 
+        padding-top:10px; 
+        padding-bottom:10px; 
+        border-radius:50px;
+        color:white;
+        background-color: rgb(85, 156, 255);
+        border: unset;
+        cursor: pointer;
+}
 
-    .large span img {
-    width: 250px; 
-    height: 250px;
-    transition: transform 0.3s ease; /* Smooth transition for transform */}
+.poem:hover{
+    color:rgb(0, 108, 22);
+    background-color: #ffc9dc;
+    border-color: rgb(0, 108, 22);
+}
 
-    .sentence span {
-        display: inline-block;
-        position:absolute;
-        transition: 1.5s ; /* Add smooth transition for movement */
-        margin-right: 5px;
-        transform: scale(0.8);
-    }
+.shape span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s ease;
+    transform: translate(-50%, -50%);
+}
 
-    .sentence span img {
-    width: 100px; 
-    height: 100px;
-    transition: transform 0.3s ease; /* Smooth transition for transform */}
+.shape span img{
+    transition: 0.5s ease; }
+    
 
-    .sentence span:hover img {
-    transform: scale(2); /* Enlarge image on hover */
+.shape span img:hover {
+    transform: scale(1.5); /* Enlarge image on hover */
+}
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#new-element {
+    display:none;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:40;
+    font-size: 3vw;
+    font-family: 'Bitter', serif; 
+    padding-left:15px; 
+    padding-right:15px; 
+    padding-top:10px; 
+    padding-bottom:10px;
+    transition: 0.5s ease;
+    color: rgb(168, 168, 255)
+
+
+}
+.page-refresh {
+    position: fixed;
+    bottom: 8vh;
+    left: 88vw;
+    z-index: 9999999999;
+    font-size: 20px; 
+    font-family: 'Bitter', serif; 
+    padding-left:15px; 
+    padding-right:15px; 
+    padding-top:10px; 
+    padding-bottom:10px; 
+    border-radius:50px; 
+    border:unset;
+    background-color: #6373ff;
+    color:white
 }
 </style>
-
 <body>
+    <button onclick="location.reload();" class="page-refresh">Refresh!</button>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:5vh; color:rgb(33, 174, 33)">This is Just to Say</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:14vh; color:pink">a poem by</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:20vh; color:pink">William Carlos Williams</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:28vh">I have eaten</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:34vh">the plums</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:40vh">that were in</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:46vh">the icebox</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:52vh">and which</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:58vh">you were probably</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:64vh">saving</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:70vh">for breakfast</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:76vh">Forgive me</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:82vh">they were delicious</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:88vh">so sweet</div>
+    <div id="new-element" onmouseenter="myFunction(this)" style="top:94vh">and so cold</div>
     
     <div class="container">
-        <p class="large">
-            <span onmouseenter="myFunction(this)"><img src="shape11.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape11.svg"></span>
-        </p>
-        <p class="sentence">
-            <span onmouseenter="myFunction(this)"><img src="shape1.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape2.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape3.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape4.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape5.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape14.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape15.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape1.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape2.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape3.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape4.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape5.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape6.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape7.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape8.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape9.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape10.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape12.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape13.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape14.svg"></span>
-            <span onmouseenter="myFunction(this)"><img src="shape15.svg"></span>
-        </p>
+        <div class="rectangle"></div>
+        <p class="shape">
+            <span onmouseenter="myFunction(this); playSound('ding.wav')" style="top: 15vh; left: 80vw;"><img src="goggles.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')" style="top: 80vh; left: 22vw;"><img src="bar1.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')" style="top: 10vh; left: 62vw;"><img src="bar2.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')"style="top: 10vh; left: 6vw;"><img src="bar3.svg"></span>
+            <span onmouseenter="myFunction(this)" style="top: 80vh; left: 10vw;"><img src="bigstar.svg"></span>
+            <span onmouseenter="myFunction(this)"style="top: 85vh; left: 30vw;"><img src="midstar.svg"></span>
+
+            
+            <span onmouseenter="myFunction(this); playSound('hum.m4a')"style="top: 58vh; left: 20vw;"><img src="bowl.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('ho.m4a')"style="top: 45vh; left: 85vw;"><img src="cup.svg"></span>
         
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')" style="top: 63vh; left: 60vw;"><img src="dots1.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')" style="top: 78vh; left: 80vw;"><img src="dots2.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('hui.m4a')" style="top: 28vh; left: 63vw;"><img src="dots3.svg"></span>
+            
+            <span onmouseenter="myFunction(this); playSound('kala.wav')" style="top: 81vh; left: 67vw;"><img src="darkice.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('kala.wav')" style="top: 63vh; left: 70vw;"><img src="lightice.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('kala.wav')" style="top: 45vh; left: 65vw;"><img src="lightice.svg"></span>
+
+            <span onmouseenter="myFunction(this); playSound('boin.wav')" style="top: 12vh; left: 32vw;"><img src="moon.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('du.wav')" style="top: 30vh; left: 9vw;"><img src="purpleplum.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('du.wav')" style="top: 15vh; left: 17vw;"><img src="redplum.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('du.wav')"style="top: 38vh; left: 15vw;"><img src="blueplum.svg"></span>
+
+            <span onmouseenter="myFunction(this); playSound('tap.wav')"style="top: 48vh; left: 35vw;"><img src="spoon.svg"></span>
+      
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 16vh; left: 40vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 10vh; left: 26vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 22vh; left: 10vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 57vh; left: 45vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 34vh; left: 73vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 23vh; left: 87vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 35vh; left: 22vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 56vh; left: 8vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 68vh; left: 95vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 16vh; left: 40vw;"><img src="smallstar.svg"></span>
+            <span onmouseenter="myFunction(this); playSound('boin.wav')"style="top: 16vh; left: 40vw;"><img src="smallstar.svg"></span>
+        
+        </p>
+    
+        <button class="poem" onclick="changeTextInOrder(this);playAudio('music.wav')" >Click me!</button>
+    
     </div>
-    <script src="sketch.js"></script>
+
+    
+    
+
+    <script>
+		var textOptions = [
+            "This is Just to Say",
+			"a poem by", 
+            "William Carlos Williams",
+			"I have eaten",
+			"the plums",
+			"that were in",
+			"the icebox",
+            "and which",
+            "you were probably",
+            "saving",
+            "for breakfast",
+            "Forgive me",
+            "they were delicious",
+            "so sweet",
+            "and so cold"
+		]
+
+		var index = 0;
+        var newElement = document.querySelector('#new-element');
+
+		function changeTextInOrder(element) {
+			element.innerText = textOptions[index];
+
+			index = index + 1;
+			if (index == textOptions.length+1) {
+                
+                element.style.display = "none";
+
+                newElement.style.display = "block";
+			}
+		}
+
+
+
+		function changeTextRandomly(element) {
+			var randomIndex = Math.floor(Math.random()*textOptions.length);
+
+			element.innerText = textOptions[randomIndex];
+		}
+
+        function myFunction(element) {
+            // Generate random position
+            var maxX = window.innerWidth - element.offsetWidth;
+            var maxY = window.innerHeight - element.offsetHeight;
+
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+
+            element.style.left = newX + 'px';
+            element.style.top = newY + 'px';
+
+            var rotateIndex = Math.floor(Math.random() * 360);
+            element.style.transform = 'rotate('+ rotateIndex +'deg)'
+}
+
+
+var audioPlayed = false;
+function playAudio(fileName) {
+        if (!audioPlayed) { // Check if the audio hasn't been played yet
+            var audio = new Audio(fileName);
+            audio.play();
+            audioPlayed = true; // Set the flag to indicate that the audio has been played
+        }
+    }
+
+function playSound(fileName) {
+			var audio = new Audio(fileName);
+			audio.play();
+		}
+</script>
+
+
+
+
 </body>
 </html>
